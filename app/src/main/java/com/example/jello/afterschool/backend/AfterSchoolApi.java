@@ -8,6 +8,7 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.jello.afterschool.R;
+import com.example.jello.afterschool.dataStructures.Teacher;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Receiver;
 
 
@@ -19,6 +20,10 @@ public class AfterSchoolApi {
     public AfterSchoolApi(Context context){
         mRequestQueue = Volley.newRequestQueue(context);
         mBaseUrl = context.getString(R.string.base_url);
+    }
+
+    public static String getUrl(Context context, String path) {
+        return context.getString(R.string.base_url) + path;
     }
 
     public void downloadData(String urlPath, Receiver<AfterSchoolResponse> listener) {

@@ -1,12 +1,8 @@
-package com.example.jello.afterschool.parent.homeScreen;
+package com.example.jello.afterschool.dataStructures;
 
 import android.graphics.Bitmap;
 
 import com.example.jello.afterschool.backend.AfterSchoolResponse;
-import com.example.jello.afterschool.dataStructures.Child;
-import com.example.jello.afterschool.dataStructures.Classroom;
-import com.example.jello.afterschool.dataStructures.Parent;
-import com.example.jello.afterschool.dataStructures.Teacher;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Optional;
 import com.jsjrobotics.demeter.dataStructures.DisplayItem;
 import com.jsjrobotics.demeter.dataStructures.DisplayableScreen;

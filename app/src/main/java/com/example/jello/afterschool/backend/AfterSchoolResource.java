@@ -5,8 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.annotation.Nullable;
 
-import com.example.jello.afterschool.dataStructures.Teacher;
-import com.example.jello.afterschool.parent.homeScreen.AppContent;
+import com.example.jello.afterschool.dataStructures.AppContent;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Optional;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Receiver;
 import com.example.jello.afterschool.R;
@@ -15,7 +14,6 @@ import com.jsjrobotics.demeter.dataStructures.resources.OnlineFirstResource;
 import com.jsjrobotics.demeter.utils.FileUtils;
 
 import java.io.File;
-import java.util.List;
 
 public class AfterSchoolResource extends OnlineFirstResource {
     private final Context mContext;

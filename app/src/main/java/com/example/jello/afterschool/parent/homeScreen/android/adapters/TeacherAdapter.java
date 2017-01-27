@@ -1,14 +1,15 @@
-package com.example.jello.afterschool.parent.homeScreen.android;
+package com.example.jello.afterschool.parent.homeScreen.android.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
 import com.example.jello.afterschool.dataStructures.Teacher;
+import com.example.jello.afterschool.parent.homeScreen.android.viewHolders.TeacherViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomePageAdapter extends RecyclerView.Adapter<TeacherViewHolder> {
+public class TeacherAdapter extends RecyclerView.Adapter<TeacherViewHolder> {
     private List<Teacher> mList = new ArrayList<>();
 
     @Override

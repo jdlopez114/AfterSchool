@@ -1,5 +1,6 @@
-package com.example.jello.afterschool.parent.homeScreen.android;
+package com.example.jello.afterschool.parent.homeScreen.android.viewHolders;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jello.afterschool.R;
+import com.example.jello.afterschool.backend.AfterSchoolApi;
 import com.example.jello.afterschool.dataStructures.Teacher;
+import com.squareup.picasso.Picasso;
 
 public class TeacherViewHolder extends RecyclerView.ViewHolder {
     private final TextView mName;
@@ -28,7 +31,10 @@ public class TeacherViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setData(Teacher teacher) {
+        Context context = itemView.getContext();
         mName.setText(teacher.getName());
+        Picasso.with(context).load(AfterSchoolApi.getUrl(context, teacher.getImage())).into(mImage);
         mSummary.setText(teacher.getId());
     }
+
 }

@@ -9,27 +9,52 @@ import android.view.ViewGroup;
 
 
 import com.example.jello.afterschool.R;
+import com.example.jello.afterschool.dataStructures.Child;
+import com.example.jello.afterschool.dataStructures.Classroom;
+import com.example.jello.afterschool.dataStructures.Parent;
+import com.example.jello.afterschool.parent.homeScreen.android.adapters.ChildAdapter;
+import com.example.jello.afterschool.parent.homeScreen.android.adapters.ClassroomAdapter;
 import com.jsjrobotics.demeter.androidWrappers.DefaultView;
 import com.example.jello.afterschool.dataStructures.Teacher;
-import com.example.jello.afterschool.parent.homeScreen.android.HomePageAdapter;
+import com.example.jello.afterschool.parent.homeScreen.android.adapters.TeacherAdapter;
 
 public class HomeScreenView implements DefaultView {
     private static final int HOMESCREEN_SPAN = 2;
     private final View mRoot;
     private final View mLoading;
-    private final RecyclerView mLoaded;
+    private final View mLoaded;
     private final View mError;
-    private final HomePageAdapter mAdapter;
+    private final RecyclerView mTeachers;
+    private final RecyclerView mChildren;
+    private final RecyclerView mClassrooms;
 
     public HomeScreenView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
-        mRoot = inflater.inflate(R.layout.main_view, viewGroup, false);
+        mRoot = inflater.inflate(R.layout.parent_homescreen_view, viewGroup, false);
         mLoading = mRoot.findViewById(R.id.loading);
-        mLoaded = (RecyclerView) mRoot.findViewById(R.id.content);
+        mLoaded = mRoot.findViewById(R.id.loaded);
         mError = mRoot.findViewById(R.id.error);
-        mAdapter = new HomePageAdapter();
-        mLoaded.setAdapter(mAdapter);
-        mLoaded.setLayoutManager(new GridLayoutManager(mRoot.getContext(), HOMESCREEN_SPAN));
+        mTeachers = (RecyclerView) mLoaded.findViewById(R.id.teachers);
+        mChildren = (RecyclerView) mLoaded.findViewById(R.id.children);
+        mClassrooms = (RecyclerView) mLoaded.findViewById(R.id.classrooms);
+        setupTeachers();
+        setupChildren();
+        setupClassrooms();
         setLoading(true);
+    }
+
+    private void setupClassrooms() {
+        mClassrooms.setAdapter(new ClassroomAdapter());
+        mClassrooms.setLayoutManager(new GridLayoutManager(mRoot.getContext(), HOMESCREEN_SPAN));
+    }
+
+    private void setupChildren() {
+        mChildren.setAdapter(new ChildAdapter());
+        mChildren.setLayoutManager(new GridLayoutManager(mRoot.getContext(), HOMESCREEN_SPAN));
+    }
+
+    private void setupTeachers() {
+        mTeachers.setAdapter(new TeacherAdapter());
+        mTeachers.setLayoutManager(new GridLayoutManager(mRoot.getContext(), HOMESCREEN_SPAN));
     }
 
     public View getLayout() {
@@ -66,7 +91,19 @@ public class HomeScreenView implements DefaultView {
         }
     }
 
-    public void addData(Teacher item) {
-        mAdapter.addData(item);
+    public void addTeacher(Teacher item) {
+        ((TeacherAdapter) mTeachers.getAdapter()).addData(item);
+    }
+
+    public void addChild(Child item) {
+        ((ChildAdapter) mChildren.getAdapter()).addData(item);
+    }
+
+    public void addParent(Parent item) {
+
+    }
+
+    public void addClassroom(Classroom item) {
+        ((ClassroomAdapter) mClassrooms.getAdapter()).addData(item);
     }
 }

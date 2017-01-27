@@ -47,4 +47,24 @@ public class Child extends DisplayItem{
             return Optional.empty();
         }
     }
+
+    public String getName() {
+        return mName;
+    }
+
+    public String getImage() {
+        return mImage;
+    }
+
+    public String getId() {
+        return mId;
+    }
+
+    public String getParentId() {
+        return mParentId;
+    }
+
+    public List<String> getClassrooms() {
+        return mClassroomIds;
+    }
 }

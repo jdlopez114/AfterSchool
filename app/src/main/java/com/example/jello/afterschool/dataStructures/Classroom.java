@@ -47,4 +47,20 @@ public class Classroom extends DisplayItem {
             return Optional.empty();
         }
     }
+
+    public String getName() {
+        return mName;
+    }
+
+    public String getTeacher() {
+        return mTeacherId;
+    }
+
+    public String getSchool() {
+        return mSchool;
+    }
+
+    public String getId() {
+        return mClassId;
+    }
 }
