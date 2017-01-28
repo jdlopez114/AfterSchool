@@ -1,17 +1,8 @@
-package com.example.jello.afterschool.backend;
-
-import com.example.jello.afterschool.dataStructures.Children;
-import com.example.jello.afterschool.dataStructures.Classrooms;
-import com.example.jello.afterschool.dataStructures.Parent;
-import com.example.jello.afterschool.dataStructures.Teacher;
+package com.example.jello.afterschool.model;
 
 import java.util.List;
 
-/**
- * Created by jello on 1/28/17.
- */
-
-public class APIResponse {
+public class AfterSchoolResponse {
 
     private List<Classrooms> classrooms;
 

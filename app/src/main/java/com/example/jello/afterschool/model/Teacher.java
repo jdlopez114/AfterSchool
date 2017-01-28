@@ -1,22 +1,16 @@
-package com.example.jello.afterschool.dataStructures;
+package com.example.jello.afterschool.model;
 
 import java.util.List;
 
-/**
- * Created by jello on 1/28/17.
- */
-
-public class Children {
+public class Teacher {
 
     private List<String> classrooms;
 
-    private String childId;
-
     private String name;
 
-    private String parent;
-
     private String image;
+
+    private String teacherId;
 
     public List<String> getClassrooms() {
         return classrooms;
@@ -24,14 +18,6 @@ public class Children {
 
     public void setClassrooms(List<String> classrooms) {
         this.classrooms = classrooms;
-    }
-
-    public String getChildId() {
-        return childId;
-    }
-
-    public void setChildId(String childId) {
-        this.childId = childId;
     }
 
     public String getName() {
@@ -42,20 +28,20 @@ public class Children {
         this.name = name;
     }
 
-    public String getParent() {
-        return parent;
-    }
-
-    public void setParent(String parent) {
-        this.parent = parent;
-    }
-
     public String getImage() {
         return image;
     }
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(String teacherId) {
+        this.teacherId = teacherId;
     }
 
 }

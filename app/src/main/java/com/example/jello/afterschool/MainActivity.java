@@ -1,20 +1,14 @@
 package com.example.jello.afterschool;
 
-import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-
-import com.example.jello.afterschool.fragments.HomeFragment;
-import com.example.jello.afterschool.fragments.SearchFragment;
-import com.example.jello.afterschool.fragments.StudentsFragment;
+import com.example.jello.afterschool.view.HomeFragment;
+import com.example.jello.afterschool.view.SearchFragment;
+import com.example.jello.afterschool.view.StudentsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,19 +37,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_home:
                 fm
                         .beginTransaction()
-                        .add(R.id.container, new SearchFragment())
+                        .replace(R.id.container, new SearchFragment())
                         .commit();
                 break;
             case R.id.menu_search:
                 fm
                         .beginTransaction()
-                        .add(R.id.container, new HomeFragment())
+                        .replace(R.id.container, new HomeFragment())
                         .commit();
                 break;
             case R.id.menu_students:
                 fm
                         .beginTransaction()
-                        .add(R.id.container, new StudentsFragment())
+                        .replace(R.id.container, new StudentsFragment())
                         .commit();
                 break;
         }

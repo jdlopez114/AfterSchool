@@ -1,4 +1,4 @@
-package com.example.jello.afterschool.fragments;
+package com.example.jello.afterschool.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,12 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.jello.afterschool.R;
-
-/**
- * Created by jello on 1/27/17.
- */
 
 public class SearchFragment extends Fragment {
 

@@ -1,10 +1,6 @@
-package com.example.jello.afterschool.dataStructures;
+package com.example.jello.afterschool.model;
 
 import java.util.List;
-
-/**
- * Created by jello on 1/28/17.
- */
 
 public class Classrooms {
 
