@@ -18,8 +18,6 @@ import com.example.jello.afterschool.fragments.StudentsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String SELECTED_ITEM = "selected.item";
-
     private BottomNavigationView bottomBar;
 
     @Override
@@ -39,27 +37,26 @@ public class MainActivity extends AppCompatActivity {
 
     private void selectFragment(MenuItem item) {
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentManager fm = getSupportFragmentManager();
 
         switch (item.getItemId()) {
             case R.id.menu_home:
-//                FragmentManager fragmentManager = getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.container, new SearchFragment());
-                fragmentTransaction.commit();
+                fm
+                        .beginTransaction()
+                        .add(R.id.container, new SearchFragment())
+                        .commit();
                 break;
             case R.id.menu_search:
-//                FragmentManager fragmentManager = getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.container, new HomeFragment());
-                fragmentTransaction.commit();
+                fm
+                        .beginTransaction()
+                        .add(R.id.container, new HomeFragment())
+                        .commit();
                 break;
             case R.id.menu_students:
-//                FragmentManager fragmentManager = getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.container, new StudentsFragment());
-                fragmentTransaction.commit();
+                fm
+                        .beginTransaction()
+                        .add(R.id.container, new StudentsFragment())
+                        .commit();
                 break;
         }
     }
