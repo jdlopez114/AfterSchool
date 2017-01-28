@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_home:
                 fm
                         .beginTransaction()
-                        .replace(R.id.container, new SearchFragment())
+                        .replace(R.id.container, new HomeFragment())
                         .commit();
                 break;
             case R.id.menu_search:
                 fm
                         .beginTransaction()
-                        .replace(R.id.container, new HomeFragment())
+                        .replace(R.id.container, new SearchFragment())
                         .commit();
                 break;
             case R.id.menu_students:
