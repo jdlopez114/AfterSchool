@@ -34,7 +34,6 @@ public class StudentsFragment extends Fragment {
 
         APIService service = retrofit.create(APIService.class);
 
-
         Call<AfterSchoolResponse> call = service.getResponse();
         call.enqueue(new Callback<AfterSchoolResponse>() {
 
@@ -43,17 +42,13 @@ public class StudentsFragment extends Fragment {
                 AfterSchoolResponse rr = response.body();
                 childrenList = rr.getChildren();
                 studentName.setText(childrenList.get(0).getName());
-
             }
 
             @Override
             public void onFailure(Call<AfterSchoolResponse> call, Throwable t) {
-
             }
         });
-
     }
-
 
     @Nullable
     @Override
