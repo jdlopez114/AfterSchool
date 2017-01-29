@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.jello.afterschool.R;
-import com.example.jello.afterschool.model.Teacher;
+import com.example.jello.afterschool.model.Children;
 
 public class HomeViewHolder extends RecyclerView.ViewHolder {
 
@@ -26,13 +26,13 @@ public class HomeViewHolder extends RecyclerView.ViewHolder {
 
     private static View createView(ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        return inflater.inflate(R.layout.teacher_item_view, parent, false);
+        return inflater.inflate(R.layout.student_item_view, parent, false);
     }
 
-    public void setData(Teacher teacher) { // this is where things got blurry
+    public void setData(Children children) { // this is where things got blurry
         Context context = itemView.getContext(); // get context then get name, imae, and summary
-        name.setText(teacher.getTeacherId());
+        name.setText(children.getName());
 //        Picasso.with(context).load(APIService)
-        summary.setText(teacher.getTeacherId());
+        summary.setText(children.getChildId());
     }
 }

@@ -9,22 +9,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.example.jello.afterschool.R;
 
-public class ChatFragment extends Fragment { // keep fragments as small as possible
+public class  ChatFragment extends Fragment { // keep fragments as small as possible
 
-    TextView studentName;
 
+    @Nullable
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        studentName = (TextView) view.findViewById(R.id.children_name);
-
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.chat_view, container, false);
     }
-
-//    @Nullable
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        return new ChatViewHelper(inflater, container, savedInstanceState).returnView();
-//    }
 
 
 }

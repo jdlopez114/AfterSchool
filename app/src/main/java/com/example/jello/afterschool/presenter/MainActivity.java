@@ -42,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
                         .replace(R.id.container, new HomeFragment())
                         .commit();
                 break;
-            case R.id.menu_search:
+            case R.id.menu_calendar:
                 fm
                         .beginTransaction()
                         .replace(R.id.container, new CurriculumFragment())
                         .commit();
                 break;
-            case R.id.menu_students:
+            case R.id.menu_chat:
                 fm
                         .beginTransaction()
                         .replace(R.id.container, new ChatFragment())

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AfterSchool</string>
     <string name="menu_home">Home</string>
-    <string name="menu_search">Search</string>
+    <string name="menu_calendar">Calendar</string>
     <string name="menu_notifications">Notifications</string>
-    <string name="menu_students">Students</string>
+    <string name="menu_chat">Chat</string>
 </resources>

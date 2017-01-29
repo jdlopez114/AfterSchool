@@ -7,12 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.jello.afterschool.presenter.MainActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-
-
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -20,19 +14,7 @@
         android:layout_weight="1"
         android:background="#ffffff">
 
-
     </FrameLayout>
-
-
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:id="@+id/recycler_view"
-        android:layout_height="wrap_content">
-
-    </android.support.v7.widget.RecyclerView>
-
-
-</LinearLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -40,6 +22,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         design:menu="@menu/bottom_nav_items" />
-
 
 </android.support.design.widget.CoordinatorLayout>

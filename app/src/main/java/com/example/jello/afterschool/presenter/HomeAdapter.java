@@ -2,17 +2,18 @@ package com.example.jello.afterschool.presenter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
-import com.example.jello.afterschool.model.Teacher;
+
+import com.example.jello.afterschool.model.Children;
 import com.example.jello.afterschool.view.HomeViewHolder;
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeViewHolder>{
 
-    private List<Teacher> teacherList = new ArrayList<>();
+    private List<Children> childrenList = new ArrayList<>();
 
-    public HomeAdapter(List<Teacher> teacherList) {
-        this.teacherList = teacherList;
+    public HomeAdapter(List<Children> teacherList) {
+        this.childrenList = teacherList;
     }
 
     @Override
@@ -22,11 +23,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeViewHolder>{
 
     @Override
     public void onBindViewHolder(HomeViewHolder holder, int position) {
-        holder.setData(teacherList.get(position));
+        holder.setData(childrenList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return teacherList.size();
+        return childrenList.size();
     }
 }
