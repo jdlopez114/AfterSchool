@@ -11,7 +11,6 @@ import android.widget.TextView;
 import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.backend.AfterSchoolApi;
 import com.example.jello.afterschool.dataStructures.Child;
-import com.example.jello.afterschool.dataStructures.Teacher;
 import com.squareup.picasso.Picasso;
 
 public class ChildViewHolder extends RecyclerView.ViewHolder {

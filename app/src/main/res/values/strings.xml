@@ -6,5 +6,11 @@
     <string name="menu_chat">Chat</string>
     <string name="homescreen_filename">home_screen.txt</string>
     <string name="homescreen_url">/cgi-bin/afterschool_parent_homepage.pl</string>
+    <string name="parent_homescreen_filename">home_screen.txt</string>
+    <string name="parent_homescreen_url">/cgi-bin/afterschool_parent_homepage.pl</string>
     <string name="base_url">http://jsjrobotics.nyc</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="parent_child_filename">parent_child.txt</string>
+    <string name="parent_child_url">/cgi-bin/afterschool_child_detail.pl</string>
 </resources>

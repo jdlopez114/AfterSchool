@@ -1,8 +1,14 @@
 package com.example.jello.afterschool.parent.homeScreen.mvp;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,13 +16,11 @@ import android.view.ViewGroup;
 
 import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.dataStructures.Child;
-import com.example.jello.afterschool.dataStructures.Classroom;
-import com.example.jello.afterschool.dataStructures.Parent;
+import com.example.jello.afterschool.parent.homeScreen.NavigationDrawer;
+import com.example.jello.afterschool.parent.homeScreen.NavigationOption;
 import com.example.jello.afterschool.parent.homeScreen.android.adapters.ChildAdapter;
-import com.example.jello.afterschool.parent.homeScreen.android.adapters.ClassroomAdapter;
+import com.jsjrobotics.defaultTemplate.lifecycle.functional.Receiver;
 import com.jsjrobotics.demeter.androidWrappers.DefaultView;
-import com.example.jello.afterschool.dataStructures.Teacher;
-import com.example.jello.afterschool.parent.homeScreen.android.adapters.TeacherAdapter;
 
 public class HomeScreenView implements DefaultView {
     private static final int HOMESCREEN_SPAN = 2;
@@ -24,37 +28,33 @@ public class HomeScreenView implements DefaultView {
     private final View mLoading;
     private final View mLoaded;
     private final View mError;
-    private final RecyclerView mTeachers;
     private final RecyclerView mChildren;
-    private final RecyclerView mClassrooms;
+    private final NavigationDrawer mNavigationDrawer;
 
-    public HomeScreenView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
-        mRoot = inflater.inflate(R.layout.parent_homescreen_view, viewGroup, false);
+    public HomeScreenView(Activity activity, LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
+        mRoot = inflater.inflate(R.layout.parent_homescreen, viewGroup, false);
         mLoading = mRoot.findViewById(R.id.loading);
         mLoaded = mRoot.findViewById(R.id.loaded);
         mError = mRoot.findViewById(R.id.error);
-        mTeachers = (RecyclerView) mLoaded.findViewById(R.id.teachers);
         mChildren = (RecyclerView) mLoaded.findViewById(R.id.children);
-        mClassrooms = (RecyclerView) mLoaded.findViewById(R.id.classrooms);
-        setupTeachers();
-        setupChildren();
-        setupClassrooms();
+        mNavigationDrawer = buildNavigationDrawer(activity);
+
+        setupChildren(mRoot.getContext());
         setLoading(true);
     }
 
-    private void setupClassrooms() {
-        mClassrooms.setAdapter(new ClassroomAdapter());
-        mClassrooms.setLayoutManager(new GridLayoutManager(mRoot.getContext(), HOMESCREEN_SPAN));
+    private NavigationDrawer buildNavigationDrawer(Activity activity) {
+        RecyclerView navigationDrawer = (RecyclerView) mRoot.findViewById(R.id.navigation_drawer);
+        DrawerLayout drawerLayout = (DrawerLayout) mRoot.findViewById(R.id.drawer_layout);
+        Toolbar toolbar = (Toolbar) mRoot.findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.app_name);
+        toolbar.setTitleTextColor(0xFFFFFFFF);
+        return new NavigationDrawer(activity, navigationDrawer, drawerLayout, toolbar);
     }
 
-    private void setupChildren() {
+    private void setupChildren(Context context) {
         mChildren.setAdapter(new ChildAdapter());
-        mChildren.setLayoutManager(new GridLayoutManager(mRoot.getContext(), HOMESCREEN_SPAN));
-    }
-
-    private void setupTeachers() {
-        mTeachers.setAdapter(new TeacherAdapter());
-        mTeachers.setLayoutManager(new GridLayoutManager(mRoot.getContext(), HOMESCREEN_SPAN));
+        mChildren.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
     }
 
     public View getLayout() {
@@ -91,19 +91,12 @@ public class HomeScreenView implements DefaultView {
         }
     }
 
-    public void addTeacher(Teacher item) {
-        ((TeacherAdapter) mTeachers.getAdapter()).addData(item);
-    }
-
-    public void addChild(Child item) {
+    void addChild(Child item) {
         ((ChildAdapter) mChildren.getAdapter()).addData(item);
     }
 
-    public void addParent(Parent item) {
-
+    void setNavigationDrawerListener(Receiver<NavigationOption> listener) {
+        mNavigationDrawer.setListener(listener);
     }
 
-    public void addClassroom(Classroom item) {
-        ((ClassroomAdapter) mClassrooms.getAdapter()).addData(item);
-    }
 }

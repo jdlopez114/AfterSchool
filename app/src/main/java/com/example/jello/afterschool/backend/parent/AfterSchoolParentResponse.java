@@ -1,4 +1,4 @@
-package com.example.jello.afterschool.backend;
+package com.example.jello.afterschool.backend.parent;
 
 import com.example.jello.afterschool.dataStructures.Child;
 import com.example.jello.afterschool.dataStructures.Classroom;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class AfterSchoolResponse {
+public class AfterSchoolParentResponse {
     private static final String JSON_SUCCESS = "success";
     private static final String JSON_RESULT = "result";
     private static final String JSON_TEACHER = "teacher";
@@ -29,7 +29,7 @@ public class AfterSchoolResponse {
     private final List<Classroom> mClassrooms;
     private final String mJson;
 
-    private AfterSchoolResponse(String json, boolean success, List<Teacher> teachers, List<Parent> parents, List<Child> children, List<Classroom> classrooms) {
+    private AfterSchoolParentResponse(String json, boolean success, List<Teacher> teachers, List<Parent> parents, List<Child> children, List<Classroom> classrooms) {
         mSuccess = success;
         mTeachers = teachers;
         mParents = parents;
@@ -46,7 +46,7 @@ public class AfterSchoolResponse {
         return mTeachers;
     }
 
-    public static AfterSchoolResponse parse(String response) {
+    public static AfterSchoolParentResponse parse(String response) {
         try {
             JSONObject json = new JSONObject(response);
             boolean success = json.getBoolean(JSON_SUCCESS);
@@ -58,7 +58,7 @@ public class AfterSchoolResponse {
             List<Parent> parents = inflateParents(parentJson);
             List<Child> children = inflateChildren(childrenJson);
             List<Classroom> classrooms = inflateClassrooms(classroomJson);
-            return new AfterSchoolResponse(response, success, teachers, parents, children, classrooms);
+            return new AfterSchoolParentResponse(response, success, teachers, parents, children, classrooms);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -128,8 +128,8 @@ public class AfterSchoolResponse {
     }
 
 
-    public static AfterSchoolResponse emptyResponse() {
-        return new AfterSchoolResponse(
+    public static AfterSchoolParentResponse emptyResponse() {
+        return new AfterSchoolParentResponse(
                 "",
                 false,
                 Collections.emptyList(),

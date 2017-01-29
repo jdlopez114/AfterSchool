@@ -9,7 +9,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Optional;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Receiver;
-import com.example.jello.afterschool.backend.AfterSchoolResponse;
+import com.example.jello.afterschool.backend.parent.AfterSchoolParentResponse;
 
 
 public class VolleyDownloader {
@@ -49,9 +49,9 @@ public class VolleyDownloader {
         };
     }
 
-    private Response.Listener<String> buildSuccessListener(final Receiver<AfterSchoolResponse> listener) {
+    private Response.Listener<String> buildSuccessListener(final Receiver<AfterSchoolParentResponse> listener) {
         return response -> {
-            AfterSchoolResponse result = AfterSchoolResponse.parse(response);
+            AfterSchoolParentResponse result = AfterSchoolParentResponse.parse(response);
             listener.accept(result);
         };
     }

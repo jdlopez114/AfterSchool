@@ -17,6 +17,6 @@ public class HomeScreenFragment extends DefaultFragment<HomeScreenPresenter, Hom
 
     @Override
     protected HomeScreenView buildView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
-        return new HomeScreenView(inflater, viewGroup, savedInstanceState);
+        return new HomeScreenView(getActivity(), inflater, viewGroup, savedInstanceState);
     }
 }

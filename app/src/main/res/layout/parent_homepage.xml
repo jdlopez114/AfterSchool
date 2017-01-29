@@ -13,35 +13,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/parent_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Teachers:"
             android:textStyle="bold"/>
         <android.support.v7.widget.RecyclerView
-            android:background="#22FF0000"
-            android:id="@+id/teachers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Children:"
-            android:textStyle="bold"/>
-        <android.support.v7.widget.RecyclerView
-            android:background="#2200FF00"
             android:id="@+id/children"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Classrooms:"
-            android:textStyle="bold"/>
-        <android.support.v7.widget.RecyclerView
-            android:background="#220000FF"
-            android:id="@+id/classrooms"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>

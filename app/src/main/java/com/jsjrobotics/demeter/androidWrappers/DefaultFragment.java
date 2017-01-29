@@ -9,10 +9,13 @@ import android.view.ViewGroup;
 public abstract class DefaultFragment<Presenter extends LifeCyclePresenter<ViewClass> , ViewClass extends DefaultView> extends Fragment {
     protected ViewClass mView;
     protected Presenter mPresenter;
+    protected abstract Presenter buildPresenter (Bundle savedInstanceState);
+    protected abstract ViewClass buildView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);
         mPresenter = buildPresenter(savedInstanceState);
         mPresenter.onCreate(() -> this);
     }
@@ -20,7 +23,7 @@ public abstract class DefaultFragment<Presenter extends LifeCyclePresenter<ViewC
     @Override
     public final void onStart() {
         super.onStart();
-        mPresenter.onStart();
+        mPresenter.onStart(mView);
     }
 
     @Override
@@ -54,24 +57,5 @@ public abstract class DefaultFragment<Presenter extends LifeCyclePresenter<ViewC
         return mView.getLayout();
     }
 
-    @Override
-    public void onViewStateRestored(final Bundle inState){
-        super.onViewStateRestored(inState);
-        mPresenter.onViewStateRestored(mView, inState);
-    }
 
-    protected abstract Presenter buildPresenter (Bundle savedInstanceState);
-
-    protected abstract ViewClass buildView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState);
-
-    public Presenter getPresenter() {
-        return mPresenter;
-    }
-
-    @Override
-    public void onSaveInstanceState(final Bundle outState) {
-        super.onSaveInstanceState(outState);
-        mPresenter.onSaveInstanceState(outState);
-        mView.saveInstanceState(outState);
-    }
 }
