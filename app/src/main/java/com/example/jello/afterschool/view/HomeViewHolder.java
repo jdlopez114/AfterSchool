@@ -10,13 +10,13 @@ import android.widget.TextView;
 import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.model.Teacher;
 
-public class TeachViewHolder extends RecyclerView.ViewHolder {
+public class HomeViewHolder extends RecyclerView.ViewHolder {
 
     TextView name;
     ImageView image;
     TextView summary;
 
-    public TeachViewHolder(ViewGroup parent) { // View itemView
+    public HomeViewHolder(ViewGroup parent) { // View itemView
         super(createView(parent));              // super(itemView)
 
         name = (TextView) itemView.findViewById(R.id.name);

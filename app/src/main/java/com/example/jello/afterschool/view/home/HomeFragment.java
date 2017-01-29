@@ -1,4 +1,4 @@
-package com.example.jello.afterschool.view;
+package com.example.jello.afterschool.view.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,34 +7,34 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.model.AfterSchoolResponse;
-import com.example.jello.afterschool.model.Children;
+import com.example.jello.afterschool.model.Teacher;
 import com.example.jello.afterschool.network.APIService;
 import com.example.jello.afterschool.network.RetroHelper;
-import java.util.ArrayList;
-import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class StudentsFragment extends Fragment { // keep fragments as small as possible
+public class HomeFragment extends Fragment {
 
-    TextView studentName;
+//    Teacher teacherList = new Teacher();
+    TextView teacherView;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        studentName = (TextView) view.findViewById(R.id.children_name);
+        teacherView = (TextView) view.findViewById(R.id.teach_view);
+        AfterSchoolResponse afterSchoolResponse = RetroHelper.getFullResponse();
 
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return new FragViewHelper(inflater, container, savedInstanceState).returnView();
+        return inflater.inflate(R.layout.home_view, container, false);
     }
-
-
 }

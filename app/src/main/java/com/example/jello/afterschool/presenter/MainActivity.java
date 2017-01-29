@@ -8,9 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.jello.afterschool.R;
-import com.example.jello.afterschool.view.HomeFragment;
-import com.example.jello.afterschool.view.SearchFragment;
-import com.example.jello.afterschool.view.StudentsFragment;
+import com.example.jello.afterschool.view.home.HomeFragment;
+import com.example.jello.afterschool.view.curriculum.CurriculumFragment;
+import com.example.jello.afterschool.view.chat.ChatFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_search:
                 fm
                         .beginTransaction()
-                        .replace(R.id.container, new SearchFragment())
+                        .replace(R.id.container, new CurriculumFragment())
                         .commit();
                 break;
             case R.id.menu_students:
                 fm
                         .beginTransaction()
-                        .replace(R.id.container, new StudentsFragment())
+                        .replace(R.id.container, new ChatFragment())
                         .commit();
                 break;
         }
