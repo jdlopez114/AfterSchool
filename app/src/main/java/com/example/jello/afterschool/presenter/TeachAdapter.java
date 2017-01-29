@@ -11,6 +11,10 @@ public class TeachAdapter extends RecyclerView.Adapter<TeachViewHolder>{
 
     private List<Teacher> teacherList = new ArrayList<>();
 
+    public TeachAdapter(List<Teacher> teacherList) {
+        this.teacherList = teacherList;
+    }
+
     @Override
     public TeachViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new TeachViewHolder(parent);
@@ -23,6 +27,6 @@ public class TeachAdapter extends RecyclerView.Adapter<TeachViewHolder>{
 
     @Override
     public int getItemCount() {
-        return 0;
+        return teacherList.size();
     }
 }
