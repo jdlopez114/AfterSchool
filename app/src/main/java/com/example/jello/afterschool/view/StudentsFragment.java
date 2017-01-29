@@ -19,7 +19,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class StudentsFragment extends Fragment {
+public class StudentsFragment extends Fragment { // keep fragments as small as possible
 
     List<Children> childrenList = new ArrayList<>();
     TextView studentName;
