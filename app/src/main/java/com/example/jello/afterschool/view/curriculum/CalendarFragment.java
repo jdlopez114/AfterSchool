@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.example.jello.afterschool.R;
 
-public class CurriculumFragment extends Fragment {
+public class CalendarFragment extends Fragment {
 
     @Nullable
     @Override

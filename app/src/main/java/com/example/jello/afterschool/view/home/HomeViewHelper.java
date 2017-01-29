@@ -10,9 +10,7 @@ import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.model.Children;
 import com.example.jello.afterschool.network.RetroHelper;
 import com.example.jello.afterschool.presenter.HomeAdapter;
-
 import java.util.List;
-
 import retrofit2.Retrofit;
 
 public class HomeViewHelper {
@@ -20,8 +18,6 @@ public class HomeViewHelper {
     private RecyclerView teacherRV;
     private View root;
     private static HomeAdapter homeAdapter;
-
-    Children childrenList = new Children();
 
     public HomeViewHelper() {
     }

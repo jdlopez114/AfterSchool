@@ -1,15 +1,11 @@
 package com.example.jello.afterschool.network;
 
 import android.util.Log;
-
 import com.example.jello.afterschool.model.AfterSchoolResponse;
 import com.example.jello.afterschool.model.Children;
 import com.example.jello.afterschool.presenter.HomeAdapter;
-import com.example.jello.afterschool.view.home.HomeFragment;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -23,8 +19,6 @@ public class RetroHelper {
     private static Retrofit instance;
     private static HomeAdapter homeAdapter;
     private static List<Children> childrenList = new ArrayList<>();
-    private static AfterSchoolResponse response = new AfterSchoolResponse();
-//    List<Teacher> teacherList = new ArrayList<>();
 
     public RetroHelper() {
     }
@@ -52,7 +46,6 @@ public class RetroHelper {
 
                 childrenList = response.body().getChildren();
                 Log.d("children", "onResponse: " + childrenList.size());
-
             }
 
             @Override

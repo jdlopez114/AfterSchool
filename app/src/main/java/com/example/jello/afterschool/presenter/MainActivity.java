@@ -9,7 +9,7 @@ import android.view.MenuItem;
 
 import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.view.home.HomeFragment;
-import com.example.jello.afterschool.view.curriculum.CurriculumFragment;
+import com.example.jello.afterschool.view.curriculum.CalendarFragment;
 import com.example.jello.afterschool.view.chat.ChatFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_calendar:
                 fm
                         .beginTransaction()
-                        .replace(R.id.container, new CurriculumFragment())
+                        .replace(R.id.container, new CalendarFragment())
                         .commit();
                 break;
             case R.id.menu_chat:
