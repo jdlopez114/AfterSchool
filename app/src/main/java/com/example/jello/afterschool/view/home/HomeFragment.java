@@ -9,14 +9,23 @@ import android.view.ViewGroup;
 
 public class HomeFragment extends Fragment {
 
+    private HomeView homeView;
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        homeView.setUpChildren();
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return new HomeViewHelper(inflater, container, savedInstanceState).getHomeView();
+        homeView = new HomeView(inflater, container, savedInstanceState);
+        return homeView.getHomeView();
     }
 }

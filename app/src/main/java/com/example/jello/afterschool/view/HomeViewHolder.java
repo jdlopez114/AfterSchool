@@ -30,7 +30,7 @@ public class HomeViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setData(Children children) { // this is where things got blurry
-        Context context = itemView.getContext(); // get context then get name, imae, and summary
+        Context context = itemView.getContext(); // get context then get name, image, and summary
         name.setText(children.getName());
 //        Picasso.with(context).load(APIService)
         summary.setText(children.getChildId());

@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, new HomeFragment())
+                .commit();
+
         bottomBar = (BottomNavigationView) findViewById(R.id.navigation);
         bottomBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -33,23 +38,22 @@ public class MainActivity extends AppCompatActivity {
 
     private void selectFragment(MenuItem item) {
 
-        FragmentManager fm = getSupportFragmentManager();
 
         switch (item.getItemId()) {
             case R.id.menu_home:
-                fm
+                getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.container, new HomeFragment())
                         .commit();
                 break;
             case R.id.menu_calendar:
-                fm
+                getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.container, new CalendarFragment())
                         .commit();
                 break;
             case R.id.menu_chat:
-                fm
+                getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.container, new ChatFragment())
                         .commit();

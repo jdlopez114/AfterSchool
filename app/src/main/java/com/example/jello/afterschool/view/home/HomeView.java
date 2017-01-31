@@ -13,24 +13,21 @@ import com.example.jello.afterschool.presenter.HomeAdapter;
 import java.util.List;
 import retrofit2.Retrofit;
 
-public class HomeViewHelper {
+public class HomeView {
 
     private RecyclerView teacherRV;
     private View root;
     private static HomeAdapter homeAdapter;
 
-    public HomeViewHelper() {
-    }
-
-    public HomeViewHelper(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
+    public HomeView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.home_view, viewGroup, false);
     }
 
     public View getHomeView(){
-        setUpChildren();
         return root;
     }
-    private void setUpChildren() {
+
+    public void setUpChildren() {
         teacherRV = (RecyclerView) root.findViewById(R.id.home_recycler_view);
         teacherRV.setLayoutManager(new LinearLayoutManager(root.getContext()));
         Retrofit retrofit = RetroHelper.getInstance();
@@ -38,5 +35,4 @@ public class HomeViewHelper {
         homeAdapter = new HomeAdapter(children);
         teacherRV.setAdapter(homeAdapter);
     }
-
 }

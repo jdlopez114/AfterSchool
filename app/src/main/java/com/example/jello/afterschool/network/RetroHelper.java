@@ -35,8 +35,8 @@ public class RetroHelper {
         return instance;
     }
 
-    public static List<Children> getFullResponse(Retrofit retrofit) {
-        APIService service = retrofit.create(APIService.class);
+    public static void getFullResponse(Retrofit retrofit) { // cant call until it retrieves something
+        APIService service = retrofit.create(APIService.class); // pass in callback
 
         Call<AfterSchoolResponse> call = service.getResponse();
         call.enqueue(new Callback<AfterSchoolResponse>() {
@@ -46,6 +46,8 @@ public class RetroHelper {
 
                 childrenList = response.body().getChildren();
                 Log.d("children", "onResponse: " + childrenList.size());
+
+
             }
 
             @Override
@@ -53,7 +55,5 @@ public class RetroHelper {
                 t.printStackTrace();
             }
         });
-
-        return childrenList;
     }
 }
