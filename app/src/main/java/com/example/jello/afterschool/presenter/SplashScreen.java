@@ -1,4 +1,4 @@
-package com.example.jello.afterschool;
+package com.example.jello.afterschool.presenter;
 
 
 import android.content.Intent;
@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
-import com.example.jello.afterschool.presenter.MainActivity;
+
+import com.example.jello.afterschool.R;
 import com.felipecsl.gifimageview.library.GifImageView;
 import org.apache.commons.io.IOUtils;
 import java.io.IOException;
@@ -23,8 +24,8 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         gifImageView = (GifImageView) findViewById(R.id.gifImageView);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        progressBar.setVisibility(progressBar.VISIBLE);
+//        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+//        progressBar.setVisibility(progressBar.VISIBLE);
 
 
         // set gifimageview resource

@@ -1,4 +1,4 @@
-package com.example.jello.afterschool.view;
+package com.example.jello.afterschool.viewholders;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

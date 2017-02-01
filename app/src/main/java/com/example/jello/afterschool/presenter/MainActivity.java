@@ -2,14 +2,13 @@ package com.example.jello.afterschool.presenter;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.view.home.HomeFragment;
-import com.example.jello.afterschool.view.curriculum.CalendarFragment;
+import com.example.jello.afterschool.view.calendar.CalendarFragment;
 import com.example.jello.afterschool.view.chat.ChatFragment;
 
 public class MainActivity extends AppCompatActivity {

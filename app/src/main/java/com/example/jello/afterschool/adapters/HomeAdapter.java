@@ -1,10 +1,10 @@
-package com.example.jello.afterschool.presenter;
+package com.example.jello.afterschool.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
 import com.example.jello.afterschool.model.Children;
-import com.example.jello.afterschool.view.HomeViewHolder;
+import com.example.jello.afterschool.viewholders.HomeViewHolder;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -3,7 +3,7 @@ package com.example.jello.afterschool.network;
 import android.util.Log;
 import com.example.jello.afterschool.model.AfterSchoolResponse;
 import com.example.jello.afterschool.model.Children;
-import com.example.jello.afterschool.presenter.HomeAdapter;
+import com.example.jello.afterschool.adapters.HomeAdapter;
 import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Call;

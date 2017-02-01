@@ -1,4 +1,4 @@
-package com.example.jello.afterschool.view.curriculum;
+package com.example.jello.afterschool.view.calendar;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
