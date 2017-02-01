@@ -10,10 +10,12 @@ import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.model.Children;
 import com.example.jello.afterschool.network.RetroHelper;
 import com.example.jello.afterschool.presenter.HomeAdapter;
+
+import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Retrofit;
 
-public class HomeView {
+public class HomeView  implements RetroHelper.RetrofitChildrenListener {
 
     private RecyclerView teacherRV;
     private View root;
@@ -28,11 +30,18 @@ public class HomeView {
     }
 
     public void setUpChildren() {
+        Retrofit retrofit = RetroHelper.getInstance();
+        RetroHelper.makeChildrenNetworkCall(retrofit, this); // passed in this because this notifies getChildren List when something changes
         teacherRV = (RecyclerView) root.findViewById(R.id.home_recycler_view);
         teacherRV.setLayoutManager(new LinearLayoutManager(root.getContext()));
-        Retrofit retrofit = RetroHelper.getInstance();
-        List<Children> children = RetroHelper.getFullResponse(retrofit);
-        homeAdapter = new HomeAdapter(children);
+        homeAdapter = new HomeAdapter(new ArrayList<Children>()); // initialize empty
         teacherRV.setAdapter(homeAdapter);
+    }
+
+    @Override
+    public void getChildrenList(List<Children> childrenList) {
+        homeAdapter = new HomeAdapter(childrenList); // assigned adapter with list, then pass in
+        teacherRV.setAdapter(homeAdapter);
+        homeAdapter.notifyDataSetChanged();
     }
 }

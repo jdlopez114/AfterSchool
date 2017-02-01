@@ -20,7 +20,7 @@ public class RetroHelper {
     private static HomeAdapter homeAdapter;
     private static List<Children> childrenList = new ArrayList<>();
 
-    public RetroHelper() {
+    private RetroHelper() {
     }
 
     public static Retrofit getInstance() {
@@ -34,8 +34,8 @@ public class RetroHelper {
         }
         return instance;
     }
-
-    public static void getFullResponse(Retrofit retrofit) { // cant call until it retrieves something
+                            // passed in interface to get response
+    public static void makeChildrenNetworkCall(Retrofit retrofit, final RetrofitChildrenListener listener) { // cant call until it retrieves something
         APIService service = retrofit.create(APIService.class); // pass in callback
 
         Call<AfterSchoolResponse> call = service.getResponse();
@@ -43,17 +43,22 @@ public class RetroHelper {
 
             @Override
             public void onResponse(Call<AfterSchoolResponse> call, Response<AfterSchoolResponse> response) {
-
-                childrenList = response.body().getChildren();
+                childrenList = response.body().getChildren(); // assign first then pass
+                listener.getChildrenList(childrenList);
                 Log.d("children", "onResponse: " + childrenList.size());
-
-
             }
 
             @Override
             public void onFailure(Call<AfterSchoolResponse> call, Throwable t) {
                 t.printStackTrace();
             }
+
+
         });
     }
+
+    public interface RetrofitChildrenListener{
+        void getChildrenList(List<Children> childrenList); // pass in
+    }
+
 }
