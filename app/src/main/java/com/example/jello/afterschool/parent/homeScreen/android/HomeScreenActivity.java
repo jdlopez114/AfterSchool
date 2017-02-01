@@ -3,7 +3,7 @@ package com.example.jello.afterschool.parent.homeScreen.android;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.jsjrobotics.defaultTemplate.lifecycle.AppCompatNavigationManager;
+import com.jsjrobotics.defaultTemplate.lifecycle.appCompat.AppCompatNavigationManager;
 import com.example.jello.afterschool.R;
 
 public class HomeScreenActivity extends AppCompatActivity {

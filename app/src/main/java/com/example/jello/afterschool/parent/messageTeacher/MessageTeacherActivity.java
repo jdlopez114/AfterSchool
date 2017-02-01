@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.parent.childProgress.ChildProgressFragment;
-import com.jsjrobotics.defaultTemplate.lifecycle.AppCompatNavigationManager;
+import com.jsjrobotics.defaultTemplate.lifecycle.appCompat.AppCompatNavigationManager;
 import com.jsjrobotics.defaultTemplate.lifecycle.appCompat.wrappers.AppCompatActivityWrapper;
 import com.jsjrobotics.defaultTemplate.lifecycle.appCompat.wrappers.interfaces.ILifecycleActivity;
 
