@@ -13,7 +13,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="#F7F7F7"></android.support.v7.widget.Toolbar>
+            android:background="#F7F7F7">
+
+        </android.support.v7.widget.Toolbar>
             <!--app:layout_scrollFlags="scroll|enterAlways"-->
             <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light" -->
 

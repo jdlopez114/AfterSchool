@@ -97,9 +97,33 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new CalendarFragment(), "CALENDAR");
         adapter.addFragment(new ChatFragment(), "CHAT");
         viewPager.setAdapter(adapter);
+
+//        switch (item.getItemId()) {
+//            case R.id.menu_home:
+//                getSupportFragmentManager()
+//                        .beginTransaction()
+//                        .replace(R.id.container, new HomeFragment())
+//                        .commit();
+//                break;
+//            case R.id.menu_calendar:
+//                getSupportFragmentManager()
+//                        .beginTransaction()
+//                        .replace(R.id.container, new CalendarFragment())
+//                        .commit();
+//                break;
+//            case R.id.menu_chat:
+//                getSupportFragmentManager()
+//                        .beginTransaction()
+//                        .replace(R.id.container, new ChatFragment())
+//                        .commit();
+//                break;
+//        }
+
+
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
+
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
@@ -117,10 +141,7 @@ public class MainActivity extends AppCompatActivity {
             return mFragmentList.size();
         }
 
-        public void addFragment(Fragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
+
 
 
 //

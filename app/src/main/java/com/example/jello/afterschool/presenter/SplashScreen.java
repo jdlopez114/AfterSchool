@@ -42,10 +42,9 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-
                 SplashScreen.this.startActivity(new Intent(SplashScreen.this, MainActivity.class));
                 SplashScreen.this.finish();
             }
-        }, 3250); //3 secs
+        }, 3150); //3 secs
     }
 }
