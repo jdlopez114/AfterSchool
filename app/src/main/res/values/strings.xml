@@ -4,4 +4,7 @@
     <string name="menu_calendar">Calendar</string>
     <string name="menu_notifications">Notifications</string>
     <string name="menu_chat">Chat</string>
+    <string name="homescreen_filename">home_screen.txt</string>
+    <string name="homescreen_url">/cgi-bin/afterschool_parent_homepage.pl</string>
+    <string name="base_url">http://jsjrobotics.nyc</string>
 </resources>
