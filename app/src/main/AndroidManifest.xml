@@ -21,9 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".login.LoginActivity" />
         <activity android:name=".presenter.MainActivity"/>
         <activity android:name=".parent.homeScreen.android.HomeScreenActivity"
-android:launchMode="singleTop"/>
+            android:launchMode="singleTop"/>
         <activity android:name=".parent.childProgress.ChildProgressActivity" />
         <activity android:name=".parent.searchPrograms.SearchForProgramsActivity" />
         <activity android:name=".parent.messageTeacher.MessageTeacherActivity" />

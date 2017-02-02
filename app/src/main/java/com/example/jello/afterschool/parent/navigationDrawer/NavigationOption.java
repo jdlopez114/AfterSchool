@@ -1,4 +1,4 @@
-package com.example.jello.afterschool.parent.homeScreen;
+package com.example.jello.afterschool.parent.navigationDrawer;
 
 public enum NavigationOption {
     HOME("Home"),

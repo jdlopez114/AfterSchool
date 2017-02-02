@@ -1,4 +1,4 @@
-package com.example.jello.afterschool.parent.homeScreen;
+package com.example.jello.afterschool.parent.navigationDrawer;
 
 import android.app.Activity;
 import android.support.v4.widget.DrawerLayout;

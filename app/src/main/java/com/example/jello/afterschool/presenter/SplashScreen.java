@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
 import com.example.jello.afterschool.R;
+import com.example.jello.afterschool.login.LoginActivity;
 import com.felipecsl.gifimageview.library.GifImageView;
 import org.apache.commons.io.IOUtils;
 import java.io.IOException;
@@ -43,7 +44,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
 
 
-                SplashScreen.this.startActivity(new Intent(SplashScreen.this, MainActivity.class));
+                SplashScreen.this.startActivity(new Intent(SplashScreen.this, LoginActivity.class));
                 SplashScreen.this.finish();
             }
         }, 3000); //3 secs

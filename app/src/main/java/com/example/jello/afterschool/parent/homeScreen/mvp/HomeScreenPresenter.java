@@ -8,14 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.jello.afterschool.dataStructures.Child;
 import com.example.jello.afterschool.parent.childProgress.ChildProgressActivity;
-import com.example.jello.afterschool.parent.homeScreen.NavigationOption;
+import com.example.jello.afterschool.parent.navigationDrawer.NavigationOption;
 import com.example.jello.afterschool.parent.messageTeacher.MessageTeacherActivity;
 import com.example.jello.afterschool.parent.searchPrograms.SearchForProgramsActivity;
 import com.jsjrobotics.defaultTemplate.lifecycle.appCompat.DefaultAppCompatLifecycleFragment;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Optional;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Receiver;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Supplier;
-import com.jsjrobotics.demeter.androidWrappers.DefaultView;
 import com.jsjrobotics.demeter.androidWrappers.LifeCyclePresenter;
 import com.jsjrobotics.demeter.dataStructures.DisplayItem;
 import com.jsjrobotics.demeter.dataStructures.DisplayTransformer;
