@@ -28,7 +28,7 @@
             android:layout_alignParentRight="true"
             android:background="#1AD6FD"
             android:text="SEND"
-            android:textColor="@color/background_material_light"/>
+            android:textColor="#F7F7F7"/>
 
         <ListView
             android:id="@+id/messagesContainer"

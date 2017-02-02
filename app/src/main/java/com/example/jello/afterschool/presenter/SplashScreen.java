@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
-
 import com.example.jello.afterschool.R;
 import com.felipecsl.gifimageview.library.GifImageView;
 import org.apache.commons.io.IOUtils;
@@ -21,12 +20,12 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.splash_screen);
 
         gifImageView = (GifImageView) findViewById(R.id.gifImageView);
-//        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-//        progressBar.setVisibility(progressBar.VISIBLE);
-
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+//        progressBar.setBackgroundColor(#1AD6FD);
+        progressBar.setVisibility(progressBar.VISIBLE);
 
         // set gifimageview resource
         try {
@@ -36,7 +35,7 @@ public class SplashScreen extends AppCompatActivity {
             gifImageView.startAnimation();
 
         } catch (IOException e) {
-//            e.printStackTrace();
+            e.printStackTrace();
         }
         // wait 3 seconds then start activity main
         new Handler().postDelayed(new Runnable() {
