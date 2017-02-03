@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jello.afterschool">
 
-    <uses-permission android:name="android.permission.INTERNET">
-
-    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -19,9 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presenter.MainActivity">
-
-        </activity>
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".presenter.MainActivity"/>
+        <activity android:name=".parent.homeScreen.android.HomeScreenActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".parent.childProgress.ChildProgressActivity" />
+        <activity android:name=".parent.searchPrograms.SearchForProgramsActivity" />
+        <activity android:name=".parent.messageTeacher.MessageTeacherActivity" />
     </application>
 
 </manifest>
