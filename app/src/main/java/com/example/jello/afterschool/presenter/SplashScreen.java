@@ -47,6 +47,6 @@ public class SplashScreen extends AppCompatActivity {
                 SplashScreen.this.startActivity(new Intent(SplashScreen.this, LoginActivity.class));
                 SplashScreen.this.finish();
             }
-        }, 3000); //3 secs
+        }, 3150); //3 secs
     }
 }

@@ -34,7 +34,7 @@ public class HomeView  implements RetroHelper.RetrofitChildrenListener {
         RetroHelper.makeChildrenNetworkCall(retrofit, this); // passed in this because this notifies getChildren List when something changes
         teacherRV = (RecyclerView) root.findViewById(R.id.home_recycler_view);
         teacherRV.setLayoutManager(new LinearLayoutManager(root.getContext()));
-        homeAdapter = new HomeAdapter(new ArrayList<Children>()); // initialize empty
+        homeAdapter = new HomeAdapter(new ArrayList<>()); // initialize empty
         teacherRV.setAdapter(homeAdapter);
     }
 
