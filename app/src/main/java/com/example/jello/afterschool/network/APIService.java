@@ -12,8 +12,6 @@ public interface APIService {
     @GET("/cgi-bin/afterschool_parent_homepage.pl/") // end point is after the first slash
     Call<AfterSchoolResponse> getResponse();
 
-    public static String getUrl(Context context, String path) {
-        return context.getString(R.string.base_url) + path;
-    }
+
 
 }

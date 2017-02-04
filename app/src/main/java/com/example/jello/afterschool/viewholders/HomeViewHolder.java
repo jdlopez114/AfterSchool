@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.model.Children;
 import com.example.jello.afterschool.network.APIService;
+import com.example.jello.afterschool.network.RetroHelper;
 import com.example.jello.afterschool.view.home.HomeFragmentEnter;
 import com.example.jello.afterschool.view.home.HomeFragmentExit;
 import com.squareup.picasso.Picasso;
@@ -57,7 +58,7 @@ public class HomeViewHolder extends RecyclerView.ViewHolder {
 
         Context context = itemView.getContext(); // get context then get nameView, imageView, and summaryView
         nameView.setText(children.getName());
-        Picasso.with(context).load(APIService.getUrl(context, children.getImage())).into(imageView);
+        Picasso.with(context).load(RetroHelper.getUrl(context, children.getImage())).into(imageView);
         summaryView.setText(children.getChildId());
 
         cardView.setOnClickListener(new View.OnClickListener() {
