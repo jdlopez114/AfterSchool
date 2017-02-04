@@ -20,9 +20,9 @@ public class TeacherViewHolder extends RecyclerView.ViewHolder {
 
     public TeacherViewHolder(ViewGroup parent) {
         super(createView(parent));
-        mName = (TextView) itemView.findViewById(R.id.name);
-        mImage = (ImageView) itemView.findViewById(R.id.image);
-        mSummary = (TextView) itemView.findViewById(R.id.summary);
+        mName = (TextView) itemView.findViewById(R.id.nameView);
+        mImage = (ImageView) itemView.findViewById(R.id.imageView);
+        mSummary = (TextView) itemView.findViewById(R.id.summaryView);
     }
 
     private static View createView(ViewGroup parent) {

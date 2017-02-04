@@ -22,8 +22,8 @@ public class ChildViewHolder extends RecyclerView.ViewHolder {
 
     public ChildViewHolder(ViewGroup parent) {
         super(createView(parent));
-        mName = (TextView) itemView.findViewById(R.id.name);
-        mImage = (ImageView) itemView.findViewById(R.id.image);
+        mName = (TextView) itemView.findViewById(R.id.nameView);
+        mImage = (ImageView) itemView.findViewById(R.id.imageView);
         mParent = (TextView) itemView.findViewById(R.id.parent);
         mChildId = (TextView) itemView.findViewById(R.id.childId);
         mClassrooms = (TextView) itemView.findViewById(R.id.classrooms);

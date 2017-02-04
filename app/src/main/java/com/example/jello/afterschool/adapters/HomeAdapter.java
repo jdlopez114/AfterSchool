@@ -24,6 +24,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeViewHolder>{
     @Override
     public void onBindViewHolder(HomeViewHolder holder, int position) {
         holder.setData(childrenList.get(position));
+
     }
 
     @Override

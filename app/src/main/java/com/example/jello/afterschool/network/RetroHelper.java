@@ -52,8 +52,6 @@ public class RetroHelper {
             public void onFailure(Call<AfterSchoolResponse> call, Throwable t) {
                 t.printStackTrace();
             }
-
-
         });
     }
 
