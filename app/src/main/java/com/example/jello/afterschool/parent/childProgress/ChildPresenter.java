@@ -16,11 +16,11 @@ import com.jsjrobotics.demeter.dataStructures.DisplayableScreen;
 import java.util.Collections;
 import java.util.List;
 
-public class ChildPresenter extends LifeCyclePresenter<ChildView> {
+public class ChildPresenter extends LifeCyclePresenter<ChildProgressView> {
     public static final String ARGS_CHILD_ID = "child_presenter.child_id";
     private final Supplier<Fragment> mContext;
     private ChildModel mModel;
-    private ChildView mView;
+    private ChildProgressView mView;
     private Optional<DisplayableScreen> mDisplayedScreen = Optional.empty();
     private final List<DisplayTransformer<? extends DisplayItem>> mTransformers;
 
@@ -46,7 +46,7 @@ public class ChildPresenter extends LifeCyclePresenter<ChildView> {
     }
 
     @Override
-    public void onStart(ChildView view) {
+    public void onStart(ChildProgressView view) {
         mView = view;
         if (!mDisplayedScreen.isPresent()) {
             mModel = new ChildModel(mContext.get().getContext());
