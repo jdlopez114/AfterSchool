@@ -1,6 +1,9 @@
 package com.example.jello.afterschool.network;
 
+import android.content.Context;
 import android.util.Log;
+
+import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.model.AfterSchoolResponse;
 import com.example.jello.afterschool.model.Children;
 import com.example.jello.afterschool.adapters.HomeAdapter;
@@ -23,6 +26,9 @@ public class RetroHelper {
     private RetroHelper() {
     }
 
+    public static String getUrl(Context context, String path) {
+        return context.getString(R.string.base_url) + path;
+    }
     public static Retrofit getInstance() {
 
         if (instance == null) {
@@ -44,7 +50,7 @@ public class RetroHelper {
             @Override
             public void onResponse(Call<AfterSchoolResponse> call, Response<AfterSchoolResponse> response) {
                 childrenList = response.body().getChildren(); // assign first then pass
-                listener.getChildrenList(childrenList);
+                listener.setChildrenList(childrenList);
                 Log.d("children", "onResponse: " + childrenList.size());
             }
 
@@ -56,7 +62,7 @@ public class RetroHelper {
     }
 
     public interface RetrofitChildrenListener{
-        void getChildrenList(List<Children> childrenList); // pass in
+        void setChildrenList(List<Children> childrenList); // pass in
     }
 
 }

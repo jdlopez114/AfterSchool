@@ -18,7 +18,7 @@ public class HomeFragmentEnter extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        homeView = new HomeView(inflater, container, savedInstanceState);
+        homeView = new HomeView(getActivity(), inflater, container, savedInstanceState);
         return homeView.getHomeView();
 
     }
