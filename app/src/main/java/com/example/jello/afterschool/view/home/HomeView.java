@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Retrofit;
 
-public class HomeView  implements RetroHelper.RetrofitChildrenListener {
+public class HomeView implements RetroHelper.RetrofitChildrenListener {
 
     private RecyclerView teacherRV;
     private View root;

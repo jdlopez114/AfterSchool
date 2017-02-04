@@ -1,10 +1,10 @@
 package com.example.jello.afterschool.viewholders;
 
-import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
-/**
- * Created by jello on 2/1/17.
- */
-
-public class ChatViewHolder {
+public class ChatViewHolder extends RecyclerView.ViewHolder{
+    public ChatViewHolder(View itemView) {
+        super(itemView);
+    }
 }

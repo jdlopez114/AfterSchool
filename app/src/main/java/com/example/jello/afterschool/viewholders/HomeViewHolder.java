@@ -57,7 +57,7 @@ public class HomeViewHolder extends RecyclerView.ViewHolder {
 
         Context context = itemView.getContext(); // get context then get nameView, imageView, and summaryView
         nameView.setText(children.getName());
-//        Picasso.with(context).load(APIService.getUrl(context, children.getImage())).into(imageView);
+        Picasso.with(context).load(APIService.getUrl(context, children.getImage())).into(imageView);
         summaryView.setText(children.getChildId());
 
         cardView.setOnClickListener(new View.OnClickListener() {
