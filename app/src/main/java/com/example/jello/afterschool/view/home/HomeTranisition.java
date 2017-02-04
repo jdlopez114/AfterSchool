@@ -1,5 +1,6 @@
 package com.example.jello.afterschool.view.home;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.transition.ChangeBounds;
@@ -7,6 +8,8 @@ import android.transition.ChangeImageTransform;
 import android.transition.ChangeTransform;
 import android.transition.TransitionSet;
 import android.util.AttributeSet;
+@TargetApi(Build.VERSION_CODES.LOLLIPOP)
+
 
 class HomeTranisition extends TransitionSet {
     public HomeTranisition() {
