@@ -50,7 +50,7 @@ public class RetroHelper {
             @Override
             public void onResponse(Call<AfterSchoolResponse> call, Response<AfterSchoolResponse> response) {
                 childrenList = response.body().getChildren(); // assign first then pass
-                listener.getChildrenList(childrenList);
+                listener.setChildrenList(childrenList);
                 Log.d("children", "onResponse: " + childrenList.size());
             }
 
@@ -62,7 +62,7 @@ public class RetroHelper {
     }
 
     public interface RetrofitChildrenListener{
-        void getChildrenList(List<Children> childrenList); // pass in
+        void setChildrenList(List<Children> childrenList); // pass in
     }
 
 }

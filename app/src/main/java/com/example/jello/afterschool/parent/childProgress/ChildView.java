@@ -6,17 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.dataStructures.TestResult;
 import com.jsjrobotics.demeter.androidWrappers.DefaultView;
 
-public class ChildView implements DefaultView {
-    public ChildView(FragmentActivity activity, LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
+class ChildView implements DefaultView {
+    private final View mRoot;
 
+    ChildView(FragmentActivity activity, LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
+        mRoot = inflater.inflate(R.layout.child_view, viewGroup, false);
     }
 
     @Override
     public View getLayout() {
-        return null;
+        return mRoot;
     }
 
     @Override
