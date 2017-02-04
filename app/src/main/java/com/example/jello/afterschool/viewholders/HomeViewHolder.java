@@ -61,36 +61,8 @@ public class HomeViewHolder extends RecyclerView.ViewHolder {
         summaryView.setText(children.getChildId());
 
         cardView.setOnClickListener(new View.OnClickListener() {
-//            HomeFragmentExit homeFragmentExit = new HomeFragmentExit();
             @Override
             public void onClick(View view) {
-
-//                ImageView staticImage = (ImageView) view.findViewById(R.id.imageView);
-//
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//                    homeFragmentExit.setSharedElementReturnTransition(TransitionInflater.from(homeFragmentExit.getContext()).inflateTransition(R.transition.change_image_trans));
-//                    homeFragmentExit.setExitTransition(TransitionInflater.from(homeFragmentExit.getContext()).inflateTransition(android.R.transition.fade));
-//
-//                    homeFragmentExit.setSharedElementEnterTransition(TransitionInflater.from(homeFragmentExit.getContext()).inflateTransition(R.transition.change_image_trans));
-//                    homeFragmentExit.setEnterTransition(TransitionInflater.from(homeFragmentExit.getContext()).inflateTransition(android.R.transition.fade));
-//                }
-//
-//                Bundle bundle = new Bundle();
-////                bundle.putString("ACTION", textView.toString());
-//                bundle.putParcelable("IMAGE", ((BitmapDrawable) imageView.getDrawable()).getBitmap());
-//                homeFragmentExit.setArguments(bundle);
-//                FragmentManager fragmentManager = homeFragmentExit.getActivity().getSupportFragmentManager();
-//                fragmentManager.beginTransaction()
-//                        .replace(R.id.linear_layout, homeFragmentExit)
-//                        .addToBackStack("Payment")
-//                        .addSharedElement(staticImage, String.valueOf(R.id.image))
-//                        .commit();
-
-//                Intent intent = new Intent(context, HomeFragmentExit.class);
-//
-//                ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(context, view.findViewById(R.id.imageView), "image");
-
-
                 Toast.makeText(context, "WORKS", Toast.LENGTH_SHORT).show();
             }
         });
