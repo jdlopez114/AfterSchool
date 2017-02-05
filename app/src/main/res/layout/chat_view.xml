@@ -51,7 +51,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="0dp"
                     android:layout_weight="3"
-                    android:src="@drawable/ic_contacts_black_24dp" />
+                    android:src="@drawable/rightpic" />
 
             </LinearLayout>
 
@@ -69,7 +69,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="0dp"
                     android:layout_weight="3"
-                    android:src="@drawable/ic_contacts_black_24dp" />
+                    android:src="@drawable/leftpic" />
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -126,7 +126,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="0dp"
                     android:layout_weight="3"
-                    android:src="@drawable/ic_notifications_black_24dp" />
+                    android:src="@drawable/rightpic" />
 
             </LinearLayout>
 
@@ -144,7 +144,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="0dp"
                     android:layout_weight="3"
-                    android:src="@drawable/ic_search_black_24dp" />
+                    android:src="@drawable/leftpic" />
 
                 <ImageView
                     android:id="@+id/imageView7"
