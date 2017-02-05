@@ -13,7 +13,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="#F7F7F7">
+            android:background="#FF1300">
 
         </android.support.v7.widget.Toolbar>
 
@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabGravity="fill"
-            app:tabIndicatorColor="#1AD6FD"
+            app:tabIndicatorColor="#FF1300"
             app:tabMode="fixed" />
     </android.support.design.widget.AppBarLayout>
 

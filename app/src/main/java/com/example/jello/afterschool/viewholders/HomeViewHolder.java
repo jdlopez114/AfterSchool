@@ -1,39 +1,21 @@
 package com.example.jello.afterschool.viewholders;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.Build;
-import android.os.Bundle;
-import android.support.transition.Fade;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.jello.afterschool.R;
 import com.example.jello.afterschool.model.Children;
-import com.example.jello.afterschool.network.APIService;
 import com.example.jello.afterschool.network.RetroHelper;
-import com.example.jello.afterschool.view.home.HomeFragmentEnter;
-import com.example.jello.afterschool.view.home.HomeFragmentExit;
 import com.squareup.picasso.Picasso;
-
-import static android.widget.Toast.LENGTH_LONG;
-import static com.example.jello.afterschool.R.id.textView;
 
 public class HomeViewHolder extends RecyclerView.ViewHolder {
 
-    private static final String TAG_FRAGMENT = "TAG";
     TextView nameView;
     ImageView imageView;
     TextView summaryView;
@@ -41,7 +23,6 @@ public class HomeViewHolder extends RecyclerView.ViewHolder {
 
     public HomeViewHolder(ViewGroup parent) { // View itemView
         super(createView(parent));              // super(itemView)
-
 
         nameView = (TextView) itemView.findViewById(R.id.nameView);
         imageView = (ImageView) itemView.findViewById(R.id.imageView);
@@ -67,6 +48,5 @@ public class HomeViewHolder extends RecyclerView.ViewHolder {
                 Toast.makeText(context, "WORKS", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }

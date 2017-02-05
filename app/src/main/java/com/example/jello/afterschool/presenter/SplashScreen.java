@@ -1,6 +1,5 @@
 package com.example.jello.afterschool.presenter;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,7 +24,6 @@ public class SplashScreen extends AppCompatActivity {
 
         gifImageView = (GifImageView) findViewById(R.id.gifImageView);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-//        progressBar.setBackgroundColor(#1AD6FD);
         progressBar.setVisibility(progressBar.VISIBLE);
 
         // set gifimageview resource

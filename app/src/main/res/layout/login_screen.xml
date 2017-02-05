@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/content">
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/imageView8"
+        android:layout_width="149dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:background="@drawable/screenshot"
+        android:maxLines="1"
+
+       />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
-        android:textSize="30sp"/>
+        android:imeOptions="actionDone"
+        android:inputType="textAutoCorrect"
+        android:maxLines="1"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:textSize="30sp"/>
+        android:imeOptions="actionDone"
+        android:inputType="textAutoCorrect"
+        android:maxLines="1"
+        android:textSize="30sp" />
+
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:textSize="30sp"/>
-    <View
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="wrap_content"
+        android:text="LOG IN"
+        android:textSize="30sp" />
+
 
 </LinearLayout>

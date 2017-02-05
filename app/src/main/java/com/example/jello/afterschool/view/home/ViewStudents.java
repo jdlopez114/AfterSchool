@@ -1,4 +1,4 @@
-package com.example.jello.afterschool.parent.homeScreen.android.viewHolders;
+package com.example.jello.afterschool.view.home;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +18,7 @@ public class ViewStudents extends AppCompatActivity {
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .add(R.id.content, new HomeFragmentEnter())
+                    .add(R.id.content, new StudentDescription())
                     .commit();
         }
     }

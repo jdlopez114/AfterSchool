@@ -11,6 +11,7 @@
     app:cardCornerRadius="12dp"
     app:cardElevation="5dp"
     app:contentPadding="4dp">
+
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
             android:layout_width="match_parent"

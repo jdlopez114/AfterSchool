@@ -34,6 +34,7 @@ public class HomeView implements RetroHelper.RetrofitChildrenListener {
     }
 
     public void setUpChildren() {
+
         Retrofit retrofit = RetroHelper.getInstance();
         RetroHelper.makeChildrenNetworkCall(retrofit, this); // passed in this because this notifies getChildren List when something changes
         teacherRV = (RecyclerView) root.findViewById(R.id.home_recycler_view);
@@ -44,8 +45,7 @@ public class HomeView implements RetroHelper.RetrofitChildrenListener {
 
     @Override
     public void setChildrenList(List<Children> childrenList) {
-        //homeAdapter = new HomeAdapter(childrenList); // assigned adapter with list, then pass in
-        //homeAdapter.notifyDataSetChanged();
+
         ClassroomAdapter adapter = new ClassroomAdapter(mActivity, childrenList);
         teacherRV.setAdapter(adapter);
         adapter.notifyDataSetChanged();
