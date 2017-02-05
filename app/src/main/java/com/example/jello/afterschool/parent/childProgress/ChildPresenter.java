@@ -3,6 +3,7 @@ package com.example.jello.afterschool.parent.childProgress;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
+import com.example.jello.afterschool.dataStructures.Child;
 import com.example.jello.afterschool.dataStructures.TestResult;
 import com.jsjrobotics.defaultTemplate.lifecycle.appCompat.DefaultAppCompatLifecycleFragment;
 import com.jsjrobotics.defaultTemplate.lifecycle.functional.Optional;
@@ -41,6 +42,20 @@ public class ChildPresenter extends LifeCyclePresenter<ChildProgressView> {
             @Override
             public void apply(TestResult item) {
                 mView.addTestResult(item);
+            }
+        };
+    }
+
+    private DisplayTransformer<Child> buildChildTransformer() {
+        return new DisplayTransformer<Child>() {
+            @Override
+            public Class<Child> getTransformToType() {
+                return Child.class;
+            }
+
+            @Override
+            public void apply(Child item) {
+                mView.addChild(item);
             }
         };
     }
