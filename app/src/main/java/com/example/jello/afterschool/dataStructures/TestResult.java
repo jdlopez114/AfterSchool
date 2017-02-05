@@ -25,7 +25,7 @@ public class TestResult extends DisplayItem{
         mGrade = grade;
     }
 
-    String getTestId() {
+    public String getTestId() {
         return mTestId;
     }
 
@@ -42,5 +42,9 @@ public class TestResult extends DisplayItem{
             e.printStackTrace();
         }
         return Optional.empty();
+    }
+
+    public String getTestGrade() {
+        return mGrade;
     }
 }

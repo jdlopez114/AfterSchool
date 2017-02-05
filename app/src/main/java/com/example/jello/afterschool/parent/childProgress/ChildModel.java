@@ -12,12 +12,15 @@ import com.jsjrobotics.demeter.dataStructures.DisplayItem;
 import com.jsjrobotics.demeter.dataStructures.DisplayTransformer;
 import com.jsjrobotics.demeter.dataStructures.DisplayableScreen;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 class ChildModel extends DefaultModel {
 
     private final AfterSchoolParentResource mParentResource;
     private final Context mContext;
+    private List<Child> mChildData = new ArrayList<>();
 
     ChildModel(Context context) {
         mContext = context;
@@ -26,6 +29,7 @@ class ChildModel extends DefaultModel {
 
 
     void loadChildData(Receiver<Optional<DisplayableScreen>> receiver) {
+        mChildData = new ArrayList<>();
         loadContent(mParentResource, buildParentReceiverWrapper(receiver));
     }
 
