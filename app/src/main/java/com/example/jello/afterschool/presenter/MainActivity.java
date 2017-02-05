@@ -1,5 +1,6 @@
 package com.example.jello.afterschool.presenter;
 
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +17,7 @@ import com.example.jello.afterschool.view.home.HomeFragmentEnter;
 
 import java.util.ArrayList;
 import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -32,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#d7d7d7"));
         tabLayout.setupWithViewPager(viewPager);
     }
+
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new HomeFragmentEnter(), "HOME");
@@ -41,20 +45,25 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new ChatFragment(), "CHAT");
         viewPager.setAdapter(adapter);
     }
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> fragmentList = new ArrayList<>();
         private final List<String> tabTitleList = new ArrayList<>();
+
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
+
         @Override
         public Fragment getItem(int position) {
             return fragmentList.get(position);
         }
+
         @Override
         public int getCount() {
             return fragmentList.size();
         }
+
         //
         @Override
         public CharSequence getPageTitle(int position) {

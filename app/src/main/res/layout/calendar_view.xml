@@ -14,9 +14,10 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="350dp">
 
         <LinearLayout
+            android:background="@drawable/gradient2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -24,6 +25,7 @@
             android:padding="10dp">
 
             <TextView
+                android:textColor="#ffffff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
@@ -31,30 +33,39 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Guitar Lessons"
                 android:textSize="23sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Band Room"
                 android:textSize="15sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tomorrow from 4:00PM to 5:00PM"
                 android:textSize="15sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Comments: Don't forget to bring the amp." />
 
             <TextView
                 android:layout_width="wrap_content"
+                android:textColor="#ffffff"
 
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
@@ -62,24 +73,32 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Office Hours"
                 android:textSize="23sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Room 112"
                 android:textSize="15sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tomorrow from 4:00PM to 5:00PM"
                 android:textSize="15sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Comments: Schedules and projects are due. " />
@@ -87,6 +106,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
+                android:textColor="#ffffff"
 
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
@@ -94,24 +114,32 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Art"
                 android:textSize="23sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Room 666"
                 android:textSize="15sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tomorrow from 4:00PM to 5:00PM"
                 android:textSize="15sp" />
 
             <TextView
+                android:textColor="#ffffff"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Comments: Dont forget the supplies!" />
